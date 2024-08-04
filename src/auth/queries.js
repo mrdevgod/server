@@ -15,3 +15,9 @@ export const addUserQuery = `
 export const findUserByEmailQuery = `
     SELECT * FROM users WHERE email = $1
 `
+
+export const changePasswordQuery = `
+    UPDATE users
+    SET password = $2
+    WHERE email = $1
+`
